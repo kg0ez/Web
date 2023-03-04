@@ -152,6 +152,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .button_signIn {
     border-radius: 5px;
     width: 90px;
+    cursor: pointer;
 }
 .button_signIn:hover {
     background-color: transparent;
@@ -228,6 +229,7 @@ flex-grow: 0;
     border-radius: 10px;
     width: 228px;
     height: 59px;
+    cursor: pointer;
 }
 .search-button:hover {
     background-color: transparent;
@@ -438,6 +440,12 @@ padding: 40px 0px 0px 100px;
 .body-marker:hover .marker-thouch{
     border: 2px solid #fff;
     color: #fff;
+}
+.body-marker:hover .marker-thouch-text{
+    color: #fff;
+}
+.marker-thouch-text{
+    color: #1F222B;
 }
 .marker-img{
     padding: 40px 0px 0px 100px;
@@ -753,3 +761,487 @@ color: #1F222B;
     content: url(/img/social/icons8-instagram-50.png);
 
 }
+
+/*----------------------------*/
+.pop_up{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 50;
+    transform: translateY(-44.5%) scale(0);
+    transition: .4s ease-in-out;
+}
+.pop_up.active{
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.pop_up_container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.pop_up_body{
+    margin: auto;
+    width: 650px;
+    height: 660px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #1F222B 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    text-align: center;
+    padding: 100px 15px 110px 15px;
+    position: relative;
+}
+.pop_up_facebook{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15px;
+gap: 15px;
+
+position: absolute;
+width: 560px;
+height: 56px;
+left: 45px;
+top: 93px;
+
+background: #1877F2;
+box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+border-radius: 10px;
+cursor: pointer;
+}
+.pop_up_auth-title{
+    position: absolute;
+width: 276px;
+height: 38px;
+left: 200px;
+top: 21px;
+
+font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+
+color: #1F222B;
+}
+
+.pop_up_google{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15px;
+gap: 15px;
+
+position: absolute;
+width: 560px;
+height: 56px;
+left: 45px;
+top: 169px;
+
+background: #FFFFFF;
+box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+border-radius: 10px;
+cursor: pointer;
+}
+.facebook-text{
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    
+    color: #FFFFFF;
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.facebook-img{
+    width: 24px;
+    height: 24px;
+}
+
+.google-img{
+    width: 24px;
+    height: 24px;
+}
+.google-text{
+    font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+
+color: #1F222B;
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.pop_up-line{
+position: absolute;
+width: 255px;
+height: 0px;
+left: 45px;
+top: 267px;
+
+border: 1px solid rgba(31, 34, 43, 0.5);
+}
+.pop_up-line2{
+    position: absolute;
+width: 261px;
+height: 0px;
+left: 344px;
+top: 267px;
+
+border: 1px solid rgba(31, 34, 43, 0.5);
+    }
+.pop_up-or{
+    position: absolute;
+    width: 42px;
+    height: 24px;
+    left: 302px;
+    top: 255px;
+    
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    
+    color: rgba(31, 34, 43, 0.5);
+}
+.pop_up-email{
+    position: absolute;
+    width: 47px;
+    height: 19px;
+    left: 45px;
+    top: 289px;
+    
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #1F222B;
+}
+.email-field{
+    position: absolute;
+    width: 560px;
+    height: 54px;
+    left: 45px;
+    top: 313px;
+    padding-left: 20px;
+    font-size: 16px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+}
+.pop_up-password{
+    position: absolute;
+    width: 69px;
+    height: 19px;
+    left: 45px;
+    top: 387px;
+    
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #1F222B;
+}
+.password-field{
+    position: absolute;
+    width: 560px;
+    height: 54px;
+    left: 45px;
+    top: 411px;
+    padding-left: 20px;
+    font-size: 16px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+}
+.password-field:focus{
+    outline: none;
+}
+.email-field:focus{
+    outline: none;
+}
+.pop_up-income{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 229px;
+    gap: 10px;
+    
+    position: absolute;
+    width: 560px;
+    height: 54px;
+    left: 45px;
+    top: 490px;
+    
+    background: #1F222B;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.income-text{
+    width: 61px;
+    height: 26px;
+    
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+.pop_up-income:hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+    .pop_up-income:hover .income-text {
+        color: #1F222B;
+        font-weight: 900;
+        font-size: bold;
+        letter-spacing: 0.2px;
+        text-shadow: 1px 1px 5px #fff;
+    }
+.pop_up-forgot_password{
+    position: absolute;
+    width: 128px;
+    height: 18px;
+    left: 274px;
+    top: 554px;
+    
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    text-decoration-line: underline;
+    
+    color: #1F222B;
+    
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+.pop_up-line3{
+    position: absolute;
+    width: 560px;
+    height: 0px;
+    left: 45px;
+    top: 598px;
+    
+    border: 1px solid rgba(31, 34, 43, 0.5);
+    transform: rotate(0.1deg);
+}
+.pop_up-footer{
+    display: flex;
+}
+.pop_up-footer-text{
+    position: absolute;
+    width: 278px;
+    height: 18px;
+    left: 191px;
+    top: 619px;
+    
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    
+    color: #1F222B;
+    
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+.pop_up-footer-income{
+    color:  #1F222B;
+    text-decoration: underline;
+}
+.pop_up-footer-regis{
+    color:  #1F222B;
+    text-decoration: underline;
+
+}
+.pop_up_close_income{
+    position: absolute;
+    left: 600px;
+    top: 33px;  
+    cursor: pointer;
+
+}
+/*---------------*/
+.pop_up-reg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 50;
+    transform: translateY(-44.5%) scale(0);
+    transition: .4s ease-in-out;
+}
+.pop_up-reg.active{
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.pop_up_body-reg{
+    margin: auto;
+    width: 650px;
+    height: 436px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #1F222B 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    text-align: center;
+    padding: 100px 15px 110px 15px;
+    position: relative;
+}
+.pop_up_close_reg{
+    position: absolute;
+    left: 600px;
+    top: 33px;  
+    cursor: pointer;
+}
+.pop_up-email-reg{
+    position: absolute;
+width: 47px;
+height: 19px;
+left: 44px;
+top: 93px;
+
+font-family: 'Aleo';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+}
+.email-field-reg{
+    position: absolute;
+    width: 560px;
+    height: 54px;
+    left: 44px;
+    top: 117px;
+    padding-left: 20px;
+    font-size: 16px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+}
+.email-field-reg:focus{
+    outline: none;
+}
+.pop_up-password-reg{
+    position: absolute;
+    width: 69px;
+    height: 19px;
+    left: 44px;
+    top: 191px;
+    
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    
+    color: #1F222B;
+}
+.password-field-reg{
+    position: absolute;
+    width: 560px;
+    height: 54px;
+    left: 44px;
+    top: 215px;
+    padding-left: 20px;
+    font-size: 16px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+}
+.password-field-reg:focus{
+    outline: none;
+}
+.pop_up-regis{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 229px;
+    gap: 10px;
+    
+    position: absolute;
+    width: 560px;
+    height: 54px;
+    left: 44px;
+    top: 294px;
+    
+    background: #1F222B;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.pop_up-regis:hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+    .pop_up-regis:hover .income-text {
+        color: #1F222B;
+        font-weight: 900;
+        font-size: bold;
+        letter-spacing: 0.2px;
+        text-shadow: 1px 1px 5px #fff;
+    }
+
+.pop_up-line3-reg{
+        position: absolute;
+width: 560px;
+height: 0px;
+left: 45px;
+top: 374px;
+
+border: 1px solid rgba(31, 34, 43, 0.5);
+transform: rotate(0.1deg);
+    }
+    .pop_up-footer-text-reg{
+        position: absolute;
+width: 196px;
+height: 18px;
+left: 227px;
+top: 395px;
+
+font-family: 'Aleo';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 18px;
+/* identical to box height */
+
+color: rgba(31, 34, 43, 0.5);
+
+text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    }
+
+    .pop_up_body-info{
+
+    }
+    .pop_up_close_info{
+        
+    }

@@ -13,26 +13,26 @@
             <div class="header__container _container">
                 <div class="header__logo header__column">
                     <img class="logo-img" src="img/header/Logo.jpg" alt="logo">
-                    <a class="logo-title">Horizon</a>
+                    <a href="#" class="logo-title">Horizon</a>
                 </div>
                 <nav class="header__menu header__column">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a class="menu__link">Акции</a>
+                            <a href="#" class="menu__link">Акции</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link">Отели</a>
+                            <a href="#" class="menu__link">Отели</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link">Мои поездки</a>
+                            <a href="#" class="menu__link">Мои поездки</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link">Журнал</a>
+                            <a href="#" class="menu__link">Журнал</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="header_button header__column">
-                    <a class="main-block__button button_signIn">
+                    <a id="pop_up_open-income" class="main-block__button button_signIn">
                         <div class="button_signIn-text">Войти</div>
                     </a>
                 </div>
@@ -132,7 +132,7 @@
                         <img class="marker-img" src="/img/getIntouch/marker.png" alt="marker">
                         <h1 class="marker-text">225710, г.Пинск<br>ул. Пушкина 4</h1>
                         <div class="marker-thouch">
-                            На карте
+                           <a class="marker-thouch-text" href="https://www.google.com/maps/place/Брестское+областное+кадетское+училище/@52.1182502,26.1185457,17.39z/data=!4m6!3m5!1s0x4727a3e3d1000001:0x7bcd0ac0c9fd1699!8m2!3d52.1185691!4d26.1199531!16s%2Fg%2F11ngtlc01n"> На карте</a>
                         </div>
                     </div>
                     <div class="body-telegram">
@@ -158,7 +158,7 @@
                     <img src="/img/popular/Frame 6.png" alt="">
                 </div>
                 <div class="more-button">
-                    <a class="main-block__button search-button">
+                    <a href="https://www.tripadvisor.ru/TravelersChoice-Destinations-cPopular-g1" class="main-block__button search-button">
                     <img class="more__img" src="/img/popular/arrow-white.png" alt="">
                     <div class="search-button-text"> Больше</div>
                     </a>
@@ -225,7 +225,7 @@
                         </div>
                     </div>
                     <div class="more-button">
-                        <a class="main-block__button search-button">
+                        <a href="https://www.tripadvisor.ru/TravelersChoice-Destinations-cPopular-g1" class="main-block__button search-button">
                         <img class="more__img" src="/img/popular/arrow-white.png" alt="">
                         <div class="search-button-text"> Больше</div>
                         </a>
@@ -314,13 +314,75 @@
                 <div class="footer__container _container">
                     <div class="footer__copu">Все права защищены © Horizon</div>
                     <div class="footer__social">
-                        <a href="" class="social__item item-inst"><img src="/img/social/icons8-instagram-48.png" /></a>
-                        <a href="https://www.instagram.com/polesskie.brodyagi/?next=https%3A%2F%2Fwww.instagram.com%2F%3F__coig_login%3D1" class="social__item item-tw"><img src="/img/social/icons8-twitter-48.png" /></a>
-                        <a href="" class="social__item item-yt"><img src="/img/social/icons8-youtube-48.png" /></a>
+                        <a href="https://www.instagram.com/polesskie.brodyagi/?next=https%3A%2F%2Fwww.instagram.com%2F%3F__coig_login%3D1" class="social__item item-inst"><img src="/img/social/icons8-instagram-48.png" /></a>
+                        <a href="https://twitter.com/?lang=en" class="social__item item-tw"><img src="/img/social/icons8-twitter-48.png" /></a>
+                        <a href="https://www.youtube.com/@SergeTsarik" class="social__item item-yt"><img src="/img/social/icons8-youtube-48.png" /></a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
+    <div id="pop_up" class="pop_up">
+        <div class="pop_up_container">
+            <div class="pop_up_body">
+                <div id="pop_up_close-income" class="pop_up_close_income">&#10006</div>
+                <h1 class="pop_up_auth-title">Войти в аккаунт</h1>
+                <div class="pop_up_facebook">
+                    <img class="facebook-img" src="/img/auth/Facebook.png" alt="">
+                    <div class="facebook-text"> Sign in with Facebook</div>
+                </div>
+                <div class="pop_up_google">
+                    <img class="google-img" src="/img/auth/icons8-google-48.png" alt="">
+                    <div class="google-text"> Sign in with Google</div>
+                </div>
+                <div>
+                    <div class="pop_up-line"></div>
+                    <div class="pop_up-or">или</div>
+                    <div class="pop_up-line2"></div>
+                </div>
+                <p class="pop_up-email">E-mail</p>
+                <input class="email-field">
+                <p class="pop_up-password">Password</p>
+                <input class="password-field">
+                <div class="pop_up-income">
+                    <p class="income-text">
+                        Войти
+                    </p>
+                </div>
+                <a href="#" class="pop_up-forgot_password">Забыли пароль?</a>
+                <div class="pop_up-line3"></div>
+                <div id="pop_up_regis">
+                    <p class="pop_up-footer-text" >Нет аккаунта? <a  href="#" class="pop_up-footer-income">Зарегистрироваться</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pop_up-reg" class="pop_up-reg">
+        <div class="pop_up_container">
+            <div class="pop_up_body-reg">
+                <div id="pop_up_close-reg" class="pop_up_close_reg">&#10006</div>
+                <h1 class="pop_up_auth-title">Войти в аккаунт</h1>
+                <p class="pop_up-email-reg">E-mail</p>
+                <input class="email-field-reg">
+                <p class="pop_up-password-reg">Password</p>
+                <input class="password-field-reg">
+                <div class="pop_up-regis">
+                    <p class="income-text">
+                        Создать
+                    </p>
+                </div>
+                <div class="pop_up-line3-reg"></div>
+                    <p class="pop_up-footer-text-reg" >Уже есть аккаунт? <a id="pop_up_intome-from-reg"  href="#" class="pop_up-footer-income">Войти</a></p>
+            </div>
+        </div>
+    </div>
+    <div id="pop_up-info" class="pop_up">
+        <div class="pop_up_container">
+            <div class="pop_up_body-info">
+                <div id="pop_up_close-info" class="pop_up_close_info">&#10006</div>
+            </div>
+        </div>
+    </div>
+    <script src="Site.js"></script>
 </body>
 </html>
