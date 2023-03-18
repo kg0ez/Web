@@ -8,6 +8,14 @@ const popUpRegis = document.getElementById('pop_up-reg');
 
 const openIncomeFrom = document.getElementById('pop_up_intome-from-reg');
 
+const hamburger = document.querySelector('.hamburger');
+const menu__list = document.querySelector('.menu__list');
+
+hamburger.addEventListener('click', ()=>{
+    hamburger.classList.toggle('active');
+    menu__list.classList.toggle('active');
+})
+
 openIncome.addEventListener('click', function(e){
     e.preventDefault();
     popUp.classList.add('active');
